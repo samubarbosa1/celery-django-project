@@ -3,24 +3,24 @@ import time
 
 
 @shared_task
-def tp1():
-    time.sleep(3)
+def tp1(queue="celery"):
+    time.sleep(20)
     return
 
 
 @shared_task
-def tp2():
-    time.sleep(3)
+def tp2(queue="celery:1"):
+    time.sleep(20)
     return
 
 
 @shared_task
-def tp3():
-    time.sleep(3)
+def tp3(queue="celery:2"):
+    time.sleep(20)
     return
 
 
 @shared_task
-def tp4():
-    time.sleep(3)
+def tp4(queue="celery:3"):
+    time.sleep(20)
     return
